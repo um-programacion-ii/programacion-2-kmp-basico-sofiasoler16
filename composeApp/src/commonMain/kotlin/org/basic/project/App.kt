@@ -33,7 +33,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import kmpbasico.composeapp.generated.resources.Res
 import kmpbasico.composeapp.generated.resources.compose_multiplatform
-
+import org.basic.project.bottonBar.bottonBarScreen
 
 @Composable
 fun App() {
@@ -111,6 +111,17 @@ class MainScreen: Screen {
 
                 }
 
+                Spacer(modifier = Modifier.height(70.dp))
+                Button(
+                    onClick = {
+                        navigator.push(bottonBarScreen())
+                    }
+                ) {
+                    Text(
+                        text = "button pantalla"
+                    )
+
+                }
             }
 
     }
